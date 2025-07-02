@@ -11,9 +11,9 @@ body {
 body {
   background: linear-gradient(
     44deg,
-    rgb(115, 196, 223),
-    rgb(253, 202, 210),
-    rgb(179, 43, 179)
+    rgba(215, 149, 121, 0.8),
+    rgb(174, 134, 90),
+    rgba(166, 135, 76, 0.7)
   );
 }
 .main-container {
@@ -31,7 +31,7 @@ body {
 }
 h2 {
   text-align: center;
-  color: #010;
+  color: rgba(56, 98, 56, 0.857);
   font-size: 2rem;
   box-shadow: 2px 2px 5px #fff;
   text-shadow: 2px 2px 2px #fff;
@@ -58,11 +58,15 @@ button {
     margin-top: 1rem;
     font-size: large;
     font-weight: 600;
-    color: rgb(0, 0, 0);
+    color:rgb(1, 2, 2) ;
+  }
+  
+  .result:hover{
+    color: rgba(21, 20, 20, 0.809);
 }
-
 button:hover{
     background-color: rgb(246, 211, 166);
     border: 0.1rem solid #010;
+    cursor: pointer;
 
 }
