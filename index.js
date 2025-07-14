@@ -1,13 +1,12 @@
 document.querySelector("button").addEventListener("click", () => {
   let fromCurrency = document.querySelector("#fromCurr").value.toUpperCase();
 
-  let url = `https://open.er-api.com/v6/latest/${fromCurrency}`;
-
-  fetch(url)
-    .then((resolve) => {
-      return resolve.json();
-    })
-    .then((data) => {
+  async function fetchCurrency() {
+    try {
+      const response = await fetch(
+        `https://open.er-api.com/v6/latest/${fromCurrency}`
+      );
+      const data = await response.json();
       let amount = parseFloat(document.querySelector("#numField").value);
       let ToCurrency = document.querySelector("#toCurr").value.toUpperCase();
       if (!data.rates[ToCurrency]) {
@@ -23,6 +22,10 @@ document.querySelector("button").addEventListener("click", () => {
         document.querySelector("#numField").value = "";
         document.querySelector("#toCurr").value = "";
       }
-    })
-    .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  fetchCurrency()
 });

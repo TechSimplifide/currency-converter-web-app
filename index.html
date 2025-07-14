@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <form action="#">
     <h2>Currency converter</h2>
     <div class="main-container">
       <div class="container">
-        <input id="numField" type="text" placeholder="Enter amount" />
-        <input id="fromCurr" type="text" placeholder="From currency" />
-        <input id="toCurr" type="text" placeholder="To currency" />
+        <input id="numField" type="text" placeholder="Enter amount"  required />
+        <input id="fromCurr" type="text" placeholder="From currency" required />
+        <img id="icons" src="./arrow_icon.png">
+        <input id="toCurr" type="text" placeholder="To currency"     required />
         <button>Convert</button>
         <div class="result"></div>
       </div>
     </div>
+    </form>
     <script src="index.js"></script>
   </body>
 </html>
